@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Transaxis Energy Limited logo">
+  <title>Transaxis Energy Limited</title>
+  <g fill="none" stroke-linecap="butt">
+    <!-- Green arc + arrowhead -->
+    <g transform="rotate(-10 100 100)">
+      <path d="M100,34 A66,66 0 0 1 157,67" stroke="#0EA352" stroke-width="30"/>
+      <polygon points="157,67 178,58 168,80" fill="#0EA352"/>
+    </g>
+    <!-- Olive arc + arrowhead -->
+    <g transform="rotate(110 100 100)">
+      <path d="M100,34 A66,66 0 0 1 157,67" stroke="#9AC93E" stroke-width="30"/>
+      <polygon points="157,67 178,58 168,80" fill="#9AC93E"/>
+    </g>
+    <!-- Yellow arc + arrowhead -->
+    <g transform="rotate(230 100 100)">
+      <path d="M100,34 A66,66 0 0 1 157,67" stroke="#F2C317" stroke-width="30"/>
+      <polygon points="157,67 178,58 168,80" fill="#F2C317"/>
+    </g>
+  </g>
+</svg>
