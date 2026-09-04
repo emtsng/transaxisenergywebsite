@@ -542,6 +542,53 @@ section{ padding: 72px 0; }
   pointer-events:none;
 }
 
+/* ---------- Section line background (services / solutions) ---------- */
+.section-lines{
+  position:relative;
+  isolation:isolate;
+}
+.section-lines > .container{ position:relative; z-index:1; }
+.section-lines-bg{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%;
+  overflow:hidden;
+  pointer-events:none;
+}
+.section-lines-bg svg{ width:100%; height:100%; display:block; }
+.section-lines-bg .line-path{
+  fill:none;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-dasharray: 10 8;
+  animation: line-flow 26s linear infinite;
+}
+.section-lines-bg .line-path.c-green{ stroke: rgba(14,163,82,0.35); }
+.section-lines-bg .line-path.c-yellow{ stroke: rgba(242,195,23,0.4); }
+.section-lines-bg .line-path.c-olive{ stroke: rgba(154,201,62,0.32); }
+.section-lines-bg .line-node{
+  animation: node-pulse 3.2s ease-in-out infinite;
+}
+.section-lines-bg .line-path.rev{ animation-direction: reverse; }
+.section-lines-bg .line-path:nth-child(2){ animation-duration: 34s; }
+.section-lines-bg .line-path:nth-child(3){ animation-duration: 20s; }
+.section-lines.on-dark .line-path.c-green{ stroke: rgba(154,201,62,0.32); }
+.section-lines.on-dark .line-path.c-yellow{ stroke: rgba(242,195,23,0.45); }
+.section-lines.on-dark .line-path.c-olive{ stroke: rgba(255,255,255,0.2); }
+
+@keyframes line-flow{
+  to{ stroke-dashoffset: -360; }
+}
+@keyframes node-pulse{
+  0%, 100%{ opacity:0.35; r:2.6; }
+  50%{ opacity:0.9; r:4; }
+}
+@media (prefers-reduced-motion: reduce){
+  .section-lines-bg .line-path, .section-lines-bg .line-node{ animation: none; }
+}
+@media (max-width:640px){
+  .section-lines-bg{ opacity:0.6; }
+}
+
 /* Project card photo media */
 .card-media{ position:relative; overflow:hidden; }
 .card-media img{ width:100%; height:100%; object-fit:cover; display:block; }
